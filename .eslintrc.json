@@ -87,7 +87,6 @@
         "no-lonely-if": "error",
         "no-unneeded-ternary": "warn",
         "semi-style": ["error", "last"],
-        "arrow-body-style": ["error", "as-needed"],
         "arrow-spacing": ["error", {
           "before": true,
           "after": true

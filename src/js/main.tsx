@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Counter from './Counter';
+import App from './Components/App';
 
-ReactDOM.render(<Counter initial={10}/>, document.querySelector('#root'));
+ReactDOM.render(<App/>, document.querySelector('#root'));

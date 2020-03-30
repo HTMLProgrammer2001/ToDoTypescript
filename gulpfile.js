@@ -90,6 +90,9 @@ function watch(){
 	gulp.watch('./src/scss/**/*.scss', scss);
 	gulp.watch('./src/css/**/*.css', css);
 	gulp.watch('./src/js/**/*.js', js('development'));
+	gulp.watch('./src/js/**/*.jsx', js('development'));
+	gulp.watch('./src/js/**/*.tsx', js('development'));
+	gulp.watch('./src/js/**/*.ts', js('development'));
 }
 
 function build(){

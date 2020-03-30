@@ -14,19 +14,18 @@ let TodoItem: React.FC<TodoItemProps> = ({todo, deleteHandler, completeChange}) 
 	};
 
 	return (
-		<li>
-			<div>
-				<input
-					type="checkbox"
-					onChange={changeHandler}
-					{...(todo.completed ? ['checked'] : [])}/>
-
-				{todo.title}
-				<span
-					onClick={
-						deleteHandler.bind(null, todo.id)
-					}>Del</span>
-			</div>
+		<li className = "row">
+			<p>
+				<label>
+					<input
+						type="checkbox"
+						onChange={changeHandler}
+						checked={todo.completed}/>
+					<span>{todo.title}</span>
+					<i className="material-icons p-1 text-red"
+					   onClick={deleteHandler.bind(null, todo.id)}>delete</i>
+				</label>
+			</p>
 		</li>
 	);
 };

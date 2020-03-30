@@ -27,11 +27,19 @@ let TodoForm: React.FC<TodoFormProps> = ({addTodo}) => {
 	};
 
 	return (
-		<div>
-			<input type="text"
-				   value = {value}
-				   onChange = {changeHandler}
-				   onKeyPress={keyPressHandler}/>
+		<div className = "row">
+			<div className="input-field col s6 m-1 offset-s3">
+				<input
+					value = {value}
+					onChange = {changeHandler}
+					onKeyPress={keyPressHandler}
+					placeholder="Todo"
+					id="todo_item"
+					type="text"
+					className="validate"/>
+
+				<label htmlFor="todo_item">Enter todo</label>
+			</div>
 		</div>
 	);
 };

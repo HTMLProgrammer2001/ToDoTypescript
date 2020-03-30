@@ -77,7 +77,7 @@
         }],
         "max-depth": ["warn", 5],
         "max-len": ["error", {
-          "code": 80,
+          "code": 120,
           "tabWidth": 4,
           "comments": 65
         }],

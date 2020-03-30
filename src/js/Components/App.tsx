@@ -17,6 +17,18 @@ let App: React.FC = () => {
 		});
 	};
 
+	const completeChange = (id: number, value: boolean) => {
+		todoDispatcher((prev) => {
+			return prev.map((todo) => {
+				if(todo.id == id) {
+					todo.completed = value;
+				}
+
+				return todo;
+			});
+		});
+	};
+
 	return (
 		<React.Fragment>
 			<TodoForm addTodo={addTodo}/>
@@ -28,6 +40,7 @@ let App: React.FC = () => {
 							return <TodoItem
 								todo={todo}
 								key={todo.id}
+								completeChange={completeChange}
 								deleteHandler={deleteTodo}/>;
 						})
 					}
